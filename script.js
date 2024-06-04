@@ -27,6 +27,33 @@ function getHumanChoice() {
     }
 }
 
-// 3. Declare humanScore and computerScore variables to keep track of scores
-// 4. Function playRound to play one single round
+// Declare variables to keep track of scores
+let humanScore = 0;
+let computerScore = 0;
+
+// Function to play one single round
+function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice()) {
+    if (humanChoice == "rock" && computerChoice == "scissors") {
+        console.log("You win! Rock beats Scissors.");
+        return humanScore++;
+    } else if (humanChoice == "rock" && computerChoice == "paper") {
+        console.log("You lose! Paper beats Rock.");
+        return computerScore++;
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You win! Paper beats Rock.");
+        return humanScore++;
+    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+        console.log("You lose! Scissors beats Paper.");
+        return computerScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
+        console.log("You win! Scissors beats Paper.");
+        return humanScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "rock") {
+        console.log("You lose! Rock beats Scissors.");
+        return computerScore++;
+    } else {
+        console.log("It's a draw!");
+    }
+}
+
 // 5. Function playGame to play 5 rounds
