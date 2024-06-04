@@ -2,7 +2,7 @@
 
 This repository showcases a JavaScript game of Rock Paper Scissors that I created as part of my journey in The Odin Project.
 
-This game can be played in the console only. 
+This game can be played via the console only. 
 It shows my ability to use basic JavaScript.
 
 If you want to know more about The Odin Project, take a look at their website [here](https://www.theodinproject.com/)!
