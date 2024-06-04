@@ -5,18 +5,28 @@ function getComputerChoice() {
     let rndInt = Math.floor(Math.random() * 3) + 1;
     let result;
     if (rndInt == 1) {
-        result = "Rock";
+        result = "rock";
         return result;
     } else if (rndInt == 2) {
-        result = "Paper";
+        result = "paper";
         return result;
     } else if (rndInt == 3) {
-        result = "Scissors";
+        result = "scissors";
         return result;
     }
 }
 
-// 2. Function to get human choice getHuman Choice
+// Function to get human choice
+function getHumanChoice() {
+    let choice = prompt("What's your pick? Rock, Paper or Scissors?").toLowerCase();
+    if (choice == "rock" || choice == "paper" || choice == "scissors") {
+        return choice;
+    } else {
+        alert("This is not a valid pick! Please type eiher Rock, Paper, or Scissors!");
+        getHumanChoice();
+    }
+}
+
 // 3. Declare humanScore and computerScore variables to keep track of scores
 // 4. Function playRound to play one single round
 // 5. Function playGame to play 5 rounds
