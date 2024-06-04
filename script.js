@@ -16,3 +16,7 @@ function getComputerChoice() {
     }
 }
 
+// 2. Function to get human choice getHuman Choice
+// 3. Declare humanScore and computerScore variables to keep track of scores
+// 4. Function playRound to play one single round
+// 5. Function playGame to play 5 rounds
