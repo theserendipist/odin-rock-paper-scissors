@@ -23,23 +23,25 @@ function playRound(humanChoice, computerChoice) {
     computerChoice = getComputerChoice();
 
     if (humanChoice == "rock" && computerChoice == "scissors") {
-        console.log("You win! Rock beats Scissors.");
+        results.textContent = "You win! Rock beats Scissors.";
     } else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose! Paper beats Rock.");
+        results.textContent = "You lose! Paper beats Rock.";
     } else if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! Paper beats Rock.");
+        results.textContent = "You win! Paper beats Rock.";
     } else if (humanChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lose! Scissors beats Paper.");
+        results.textContent = "You lose! Scissors beats Paper.";
     } else if (humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! Scissors beats Paper.");
+        results.textContent = "You win! Scissors beats Paper.";
     } else if (humanChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lose! Rock beats Scissors.");
+        results.textContent = "You lose! Rock beats Scissors.";
     } else {
-        console.log("It's a draw!");
+        results.textContent = "It's a draw!";
     }
 }
 
-//Event listeners to record human choice and play one round
+//Event listeners to record human choice and play one round, display results
+const results = document.querySelector("#results");
+
 const rckBtn = document.querySelector("#rck-btn");
 rckBtn.addEventListener("click", () => {
     playRound(humanChoice = "rock");
