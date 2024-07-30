@@ -16,26 +16,51 @@ function getComputerChoice() {
     }
 }
 
-// Function to play one single round
+// Function to play game
 let humanChoice;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     computerChoice = getComputerChoice();
 
     if (humanChoice == "rock" && computerChoice == "scissors") {
-        results.textContent = "You win! Rock beats Scissors.";
+        humanScore ++;
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                               + "<p>You win! Rock beats Scissors.</p>";
     } else if (humanChoice == "rock" && computerChoice == "paper") {
-        results.textContent = "You lose! Paper beats Rock.";
+        computerScore ++;
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                                + "<p>You lose! Paper beats Rock.</p>";
     } else if (humanChoice == "paper" && computerChoice == "rock") {
-        results.textContent = "You win! Paper beats Rock.";
+        humanScore ++;
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                                + "<p>You win! Paper beats Rock.</p>";
     } else if (humanChoice == "paper" && computerChoice == "scissors") {
-        results.textContent = "You lose! Scissors beats Paper.";
+        computerScore ++;
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                               + "<p>You lose! Scissors beats Paper.</p>";
     } else if (humanChoice == "scissors" && computerChoice == "paper") {
-        results.textContent = "You win! Scissors beats Paper.";
+        humanScore ++;
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                                + "<p>You win! Scissors beats Paper.</p>";
     } else if (humanChoice == "scissors" && computerChoice == "rock") {
-        results.textContent = "You lose! Rock beats Scissors.";
+        computerScore ++;
+        results.inneHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                               + "<p>You lose! Rock beats Scissors.</p>";
     } else {
-        results.textContent = "It's a draw!";
+        results.innerHTML = `<p>Player ${humanScore} : ${computerScore} Computer</p>`
+                                + "<p>It's a draw!</p>";
+    }
+
+    if (humanScore == 5) {
+        results.innerHTML += "<h3>You win this game!</h3>";
+        humanScore = 0;
+        computerScore = 0; 
+    } else if (computerScore == 5) {
+        results.innerHTML += "<h4>The Computer wins this game!</h4>";
+        humanScore = 0;
+        computerScore = 0; 
     }
 }
 
