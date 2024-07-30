@@ -53,6 +53,7 @@ function playRound(humanChoice, computerChoice) {
                                 + "<p>It's a draw!</p>";
     }
 
+    // Checks win situation and resets afterwards
     if (humanScore == 5) {
         results.innerHTML += "<h3>You win this game!</h3>";
         humanScore = 0;
@@ -64,7 +65,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-//Event listeners to record human choice and play one round, display results
+//Event listeners to record human choice and play round
 const results = document.querySelector("#results");
 
 const rckBtn = document.querySelector("#rck-btn");
